@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* Reseta espaçamentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho do site */
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo do projeto */
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Menu no canto direito */
+.menu-direita {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.menu-direita ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-direita a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito de luz azul ao passar o mouse */
+.menu-direita a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 183, 255, 0.4);
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Seção principal com mapa e dicas */
+.principal {
+    display: grid;
+    grid-template-columns: 53% 47%;
+    margin: 0 10vw;
+}
+
+/* Mapa interativo */
+.principal .mapa {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    background-image: url('../imagens/mapapronto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.principal .mapa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dicas ao lado do mapa */
+.principal .dicas {
+    text-align: left;
+    padding-top: 4vh;
+    margin-left: 100px;
+}
+
+/* Título da seção achados */
+.achados .head1 {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Título da seção perdidos */
+.perdidos .head2 {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Lista de pets achados e perdidos em grade */
+.achados .lista,
+.perdidos .lista {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+/* Card de cada pet - estilo similar aos produtos */
+.pet-card {
+    background: #719cff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 280px;
+    width: 250px;
+    text-align: center;
+    color: #fdfdfd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.34);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse no card */
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Foto do pet */
+.pet-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Ajusta posição das fotos específicas */
+.perdido1 img {
+    object-position: 0 18%;
+}    
+.pet4 img {
+    object-position: 0 20%;
+}
+.perdido3 img {
+    object-position: 0 17%;
+}
+.perdido2 img {
+    object-position: 0 2%;
+}
+
+/* Formulários */
+.forms{
+    margin: auto;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Seção sobre */
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    height: 50vh;
+}
+
+/* Cursor personalizado (patinha) */
+body {
+    cursor: url('../imagens/Pata1.png') 18 18, auto;
+}
+
+/* Cursor ao passar em coisas clicáveis */
+.menu-direita a,
+a, button, [role="button"], input, select, textarea, label, .produto, .servico, .clicavel {
+    cursor: url('../imagens/Pata2.png') 18 18, pointer;
+}
+
+/* Campos de texto e upload */
+.forms input[type="text"],
+.forms input[type="file"] {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forms label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group label {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Campo de texto grande */
+.forms textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+
+/* Fontes do Google Fonts */
+.bcc-logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 900;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 123, 255, 0.3);
+    font-stretch: expanded;
+}
+
+body {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 370;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kanit', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .achados .lista,
+    .perdidos .lista {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .pet-card {
+        min-height: 240px;
+    }
+    
+    .pet-card img {
+        height: 150px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .achados .lista,
+    .perdidos .lista {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

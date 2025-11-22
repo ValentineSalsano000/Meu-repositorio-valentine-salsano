@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* Remove margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho sem fundo */
+header {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo com tamanho padrão igual ao index */
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Seção principal */
+.principal {
+    display: grid;
+    grid-template-columns: 53% 47%;
+    margin: 0 10vw;
+
+    & .mapa {
+        width: 800px;
+        height: 500px;
+        background-color: lightgreen;
+    }
+
+    & .dicas {
+        padding-top: 40vh;
+        margin-right: 20vw;
+    }
+}
+
+/* Seção de achados */
+.achados {
+    & .lista {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+        
+        & p {
+            margin: 10px;
+            background-color: lightgray;
+        }
+    }
+}
+
+/* Seção de perdidos */
+.perdidos {
+    & .lista {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+        
+        & p {
+            margin: 10px;
+            background-color: lightgray;
+        }
+    }
+}

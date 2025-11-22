@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* Cabeçalho da página */
+.head {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Seções de produtos e serviços */
+.produtos,
+.servicos {
+    padding: 40px 20px;
+}
+
+/* Títulos das seções */
+.produtos h2,
+.servicos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grade que organiza produtos e serviços */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5\, 250px);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+/* Grade de produtos com 5 colunas */
+.produtos .grid-container {
+    grid-template-columns: repeat(5, 250px);
+}
+
+/* Últimos 3 produtos ocupam 1 coluna cada */
+.produtos .grid-container .produto:nth-child(9),
+.produtos .grid-container .produto:nth-child(10),
+.produtos .grid-container .produto:nth-child(11) {
+    grid-column: span 1;
+}
+
+/* Grade de serviços com 4 colunas */
+.servicos .grid-container {
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center;
+}
+
+/* Card de produto */
+.produto {
+    background: #92d3f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 280px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse no produto */
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagem do produto */
+.produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Informações do produto */
+.prod-info {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Card de serviço */
+.servico {
+    background: #b8d4e8;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 280px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse no serviço */
+.servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem do serviço */
+.servico img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Informações do serviço */
+.servico-info {
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}

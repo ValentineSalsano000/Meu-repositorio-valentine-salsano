@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* Seção de redes sociais */
+.redes{
+    margin: auto;
+    display: block;
+    text-align: center;
+    outline: 1px solid black;
+    max-width: 50vw;
+    padding-bottom: 50px;
+
+    & .caixa{
+        display: flex;
+        flex-flow: row nowrap; /* mantém tudo na mesma linha */
+        justify-content: space-evenly;
+        border-radius: 20%;
+        align-items: center;
+
+        & .item{
+            margin-top: 20px;
+            flex-basis: 80px;
+            width: 80px;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            gap: 8px;
+        }
+        
+        /* Efeito ao passar o mouse */
+        & .item:hover {
+            transform: scale(1.1); /* aumenta o tamanho */
+        }
+        
+        /* Ícones das redes sociais */
+        & .item img {
+            border-radius: 20%;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        
+        /* Nome da rede social */
+        & .item .label {
+            display: block;
+            font-size: 0.75rem;
+            color: #333;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+}
+
+/* Seção de depoimentos */
+.depoimentos {
+    margin: auto;
+    display: block;
+    text-align: left;
+    max-width: 70vw;
+    outline: 1px solid black;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    & h1{
+        text-align: center;
+    }
+
+    & .dp {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        column-gap: 5px;
+        margin-top: 20px;
+    }
+    
+    & .item{
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+    }
+}
+
+/* Tamanho padrão dos avatares */
+:root {
+    --avatar-size: 140px;
+}
+
+/* Container que organiza os depoimentos */
+.depoimentos .dp {
+    /*display: flex;*/
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+/* Cada card de depoimento */
+.depoimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 220px;
+}
+
+/* Foto redonda do cliente */
+.depoimento .item {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagem do cliente sem cortar */
+.depoimento .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    display: block;
+    background: #fff;
+}
+
+/* Texto do depoimento */
+.depoimento .texto {
+    color: #770e0e;
+    text-align: center;
+    margin-top: 6px;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.depoimento .texto p { 
+    margin: 0; 
+}
+
+.depoimento .texto strong { 
+    display: block; 
+    margin-bottom: 6px; 
+    font-weight: 700; 
+}
+
+/* Para telas menores */
+@media (max-width:700px){
+    :root{ --avatar-size: 110px; }
+    .depoimento{ width:48%; }
+}
+
+/* Seção de suporte */
+.suporte {
+    outline: 1px solid black;
+    margin: auto;
+    max-width: 70vw;
+    height: 20vh;
+    max-height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+    
+    & .sups{
+        padding: 0;
+        width: 100px;
+        height: 120px;
+        background-color:rgb(109, 219, 239);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+    }
+}
+
+footer {
+    margin-top: 50px;
+}
