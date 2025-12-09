@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Jogo RPG (GCC)",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "main.c",
+                "personagem.c",
+                "inventario.c",
+                "arvore_decisao.c",
+                "-o",
+                "${workspaceFolder}/rpg_vida_em_c.exe" // Onde o executável será criado
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
