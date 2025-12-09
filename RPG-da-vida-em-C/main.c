@@ -214,4 +214,4 @@ int main() {
 
     printf("\nObrigado por jogar!\n");
     return 0;
-} // Fim da função main
+}// Fim da função main
