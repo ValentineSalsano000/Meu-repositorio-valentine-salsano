@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run RPG (Build+Run)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\rpg_da_vida.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "preLaunchTask": "Build RPG (gcc)",
+      "console": "integratedTerminal",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe"
+    }
+  ]
+}

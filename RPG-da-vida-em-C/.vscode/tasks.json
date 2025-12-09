@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build RPG (gcc)",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "main.c",
+        "personagem.c",
+        "inventario.c",
+        "arvore_decisao.c",
+        "-o",
+        "rpg_da_vida.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Run RPG (after build)",
+      "type": "shell",
+      "dependsOn": "Build RPG (gcc)",
+      "command": ".\\rpg_da_vida.exe",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    }
+  ]
+}
