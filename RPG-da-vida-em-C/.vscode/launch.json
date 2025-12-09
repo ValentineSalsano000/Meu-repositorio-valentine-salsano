@@ -2,6 +2,23 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Run RPG (external console)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\rpg_da_vida.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe"
+    }
+  ]
+}
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
       "name": "Run RPG (Build+Run)",
       "type": "cppdbg",
       "request": "launch",
